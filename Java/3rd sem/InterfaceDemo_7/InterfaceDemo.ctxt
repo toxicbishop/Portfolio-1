@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=InterfaceDemo
+comment1.params=width
+comment1.target=void\ resizeWidth(int)
+comment2.params=height
+comment2.target=void\ resizeHeight(int)
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

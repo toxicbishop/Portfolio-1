@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Flexbox & Grid</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <p>The<code>#include&lt;stdio.h&gt;</code>element is used to define a code snippet in HTML.</p>
+    <br>
+    <p>Press <kbd>Ctrl</kbd>+<kbd>S</kbd> to save your work.</p>
+    <input type="input" list="colors"/>
+    <datalist id="colors">
+        <option value="Red"></option>
+        <option value="Green"></option>
+        <option value="Blue"></option>
+        <option value="Yellow"></option>
+        <option value="Black"></option>
+    </datalist>
+    <dialog><p> This is a dialog box. </p></dialog>
+    <button onclick="opneme()">Open Dialog</button>
+        <p>This is a dialog box</p>
+        <script>
+            function opneme(){
+                document.querySelector('dialog').showModal();
+            }
+        </script>
+        <h2>FAQ<h2>
+        <details>
+            <summary>What is HTML?</summary>
+            <p>HTML stands for HyperText Markup Language. It is the standard language for creating web pages and web applications.</p>
+        </details>
+        <details>
+            <summary>What is CSS?</summary>
+            <p>CSS stands for Cascading Style Sheets. It is used to style and layout web pages, including the design, colors, and fonts.</p>   
+        </details>
+        <p> The store closes at <time datetime="22:00">10 PM</time> every day. </p>
+        <ruby>
+            Main<rt>little</rt>
+            Main<rt>little</rt>
+        </ruby><br>   
+        <progress value="70" max="100"></progress>
+        <meter value="20" min="10" max="100" low="30" high="100" optimum="70">2 out of 10</meter>
+        <fieldset>
+            <legend> Personal Information </legend>
+            Name: <input type="text" name="name"/><br>
+            Email: <input type="email" name="email"/><br>
+            Age: <input type="number" name="age"/><br>
+            Phone: <input type="tel" name="phone"/><br>
+            
+        </fieldset>
+        <footer>
+            <p>Copyright &copy; 2026 MyWebsite</p>
+</body>
+</html>

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ThreadDemo
+comment1.params=
+comment1.target=Counter()
+comment2.params=name
+comment2.target=Counter(java.lang.String)
+comment3.params=
+comment3.target=void\ start()
+comment4.params=
+comment4.target=void\ run()
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6

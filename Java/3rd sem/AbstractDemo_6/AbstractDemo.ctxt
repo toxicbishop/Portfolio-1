@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=AbstractDemo
+comment1.params=
+comment1.target=double\ calculateArea()
+comment2.params=
+comment2.target=double\ calculatePerimeter()
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

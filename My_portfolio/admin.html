@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="icon" type="image/png" href="seo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Extra styles just for the Admin Table */
+      .message-card {
+        background: white;
+        border-left: 5px solid var(--primary-color);
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+      .message-header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #555;
+      }
+      .message-body {
+        font-size: 1.1rem;
+        color: #333;
+      }
+      /* Dark mode support for cards */
+      body.dark-mode .message-card {
+        background: #1e1e1e;
+        color: #e0e0e0;
+        border-left: 5px solid #bb86fc;
+      }
+      body.dark-mode .message-header {
+        color: #aaa;
+        border-bottom: 1px solid #444;
+      }
+      body.dark-mode .message-body {
+        color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>🔒 Admin Dashboard</h1>
+        <button id="theme-toggle" class="toggle-btn">🌙 Dark Mode</button>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="admin.html" style="background: rgba(255, 255, 255, 0.2)"
+          >Dashboard</a
+        >
+      </nav>
+    </header>
+
+    <main style="max-width: 800px">
+      <h4 style="margin-bottom: 30px">Received Messages</h4>
+
+      <div id="messages-container">
+        <p>Loading messages from database...</p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+
+    <script>
+      async function fetchMessages() {
+        const container = document.getElementById("messages-container");
+
+        try {
+          // 1. Request data from Python Backend
+          const response = await fetch("http://127.0.0.1:5000/get-messages");
+          const messages = await response.json();
+
+          // 2. Clear "Loading..." text
+          container.innerHTML = "";
+
+          if (messages.length === 0) {
+            container.innerHTML = "<p>No messages found in database.</p>";
+            return;
+          }
+
+          // 3. Loop through data and create HTML cards
+          messages.forEach((msg) => {
+            const card = document.createElement("div");
+            card.className = "message-card";
+
+            card.innerHTML = `
+                        <div class="message-header">
+                            <span>👤 ${msg.name}</span>
+                            <span>📧 ${msg.email}</span>
+                        </div>
+                        <div class="message-body">
+                            "${msg.message}"
+                        </div>
+                    `;
+            container.appendChild(card);
+          });
+        } catch (error) {
+          console.error("Error:", error);
+          container.innerHTML =
+            '<p style="color: red;">⚠️ Error: Could not connect to Python backend. Is app.py running?</p>';
+        }
+      }
+
+      // Run this function immediately when page loads
+      fetchMessages();
+    </script>
+  </body>
+</html>

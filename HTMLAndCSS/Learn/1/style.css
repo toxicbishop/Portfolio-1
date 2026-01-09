@@ -1,0 +1,36 @@
+body{
+min-height: 800px;
+border: 8px  solid black;
+row-gap: 10px;
+columns: 10px;
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+align-content: center;
+}
+
+code{
+    color: rgb(0, 0, 0);
+    padding: 2px 2px;
+    border-radius: 5px;
+}
+
+#box-1{
+    align-self: center;
+}
+
+kbd{
+    background-color: rgb(236, 236, 236);
+    border-radius: 5%;
+    padding: 5px;
+    border: 2px solid rgb(189, 189, 189);
+}
+
+.box{
+height: 200px;
+width: 200px;
+background-color: #0071FF;
+font-size: 40pt;
+}

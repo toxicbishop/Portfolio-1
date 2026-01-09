@@ -1,0 +1,276 @@
+/* --- GLOBAL & BODY --- */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Light Mode (Default) */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+body:not(.light-mode) {
+    background-color: #222;
+    color: #fff;
+}
+
+/* --- CONTROLS (TOP RIGHT) --- */
+.controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 10;
+    flex-wrap: wrap; /* Allows buttons to wrap on small screens */
+}
+
+/* Common button style for top controls */
+#sci-toggle, #history-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    height: 40px; 
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: hsl(210, 50%, 50%);
+    color: white;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+#sci-toggle:hover, #history-toggle:hover { background-color: hsl(210, 50%, 60%); }
+#sci-toggle.active, #history-toggle.active { background-color: hsl(150, 60%, 40%); box-shadow: 0 0 10px hsla(150, 60%, 40%, 0.5); }
+
+/* History button specific color (optional) */
+#history-toggle { background-color: hsl(280, 50%, 50%); }
+#history-toggle:hover { background-color: hsl(280, 50%, 60%); }
+#history-toggle.active { background-color: hsl(280, 60%, 40%); }
+
+
+/* Theme Switch Styling */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+}
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+.theme-switch input { display: none; }
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+    border-radius: 50%;
+    z-index: 2;
+}
+input:checked + .slider { background-color: #66bb6a; }
+input:checked + .slider:before { transform: translateX(26px); }
+.icon-sun, .icon-moon { width: 16px; height: 16px; z-index: 1; stroke: #555; }
+
+/* --- CALCULATOR CONTAINER --- */
+#calculator-app {
+    width: auto;
+    max-width: 95vw;
+    background-color: hsl(0, 0%, 20%);
+    border-radius: 30px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
+    min-height: 500px; /* Ensure height doesn't collapse when switching views */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- DISPLAY SCREEN --- */
+#display {
+    width: 100%;
+    height: 80px;
+    border: none;
+    background-color: hsl(0, 0%, 10%);
+    color: white;
+    font-size: 2.5rem;
+    text-align: right;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    flex-shrink: 0;
+}
+
+/* --- HISTORY PANEL --- */
+#history-panel {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    height: 320px; /* Approximate height of keypad */
+    overflow: hidden;
+    animation: fadeIn 0.3s;
+}
+
+#calculator-app.history-mode #keys {
+    display: none; /* Hide keys when history is active */
+}
+#calculator-app.history-mode #history-panel {
+    display: flex; /* Show history */
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-weight: bold;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.clear-hist-btn {
+    width: auto;
+    height: 30px;
+    padding: 0 15px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    background-color: #ff6b6b;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.history-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: background 0.2s;
+}
+.history-item:hover { background-color: rgba(255, 255, 255, 0.15); }
+.hist-expr { font-size: 0.9rem; color: #aaa; margin-bottom: 4px; }
+.hist-res { font-size: 1.2rem; font-weight: bold; color: #fff; }
+
+/* Custom Scrollbar for history */
+#history-list::-webkit-scrollbar { width: 8px; }
+#history-list::-webkit-scrollbar-track { background: #333; border-radius: 4px;}
+#history-list::-webkit-scrollbar-thumb { background: #555; border-radius: 4px; }
+#history-list::-webkit-scrollbar-thumb:hover { background: #777; }
+
+
+/* --- BUTTONS LAYOUT (GRID) --- */
+#keys {
+    display: grid;
+    grid-template-columns: 0fr auto auto; 
+    gap: 15px;
+    transition: grid-template-columns 0.4s ease;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+#calculator-app.expanded #keys {
+    grid-template-columns: auto auto auto;
+}
+
+/* --- SECTIONS --- */
+#science {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    width: 0; 
+    transition: opacity 0.3s ease, visibility 0.3s, width 0.3s ease;
+}
+
+#calculator-app.expanded #science {
+    opacity: 1;
+    visibility: visible;
+    width: auto; 
+    margin-right: 15px; 
+}
+
+#operators {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    height: fit-content;
+}
+
+#numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+/* --- BUTTON STYLES --- */
+button {
+    width: 65px;  
+    height: 65px;
+    border-radius: 50%;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: filter 0.2s, transform 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+button:hover { filter: brightness(1.2); }
+button:active { filter: brightness(0.9); transform: scale(0.95); }
+
+.sci-btn { background-color: hsl(0, 0%, 25%); font-size: 1rem; }
+.operator-btn { background-color: hsl(35, 100%, 50%); color: #000; font-size: 1.6rem; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
