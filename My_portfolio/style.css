@@ -130,18 +130,93 @@ h4 {
   transform: scale(1.05);
 }
 
-/* 7. Footer */
-footer {
-  background-color: var(--footer-bg);
+/* 7. Fat Footer */
+.fat-footer {
+  background: var(--footer-bg);
   color: var(--footer-text);
-  text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
   margin-top: auto;
 }
 
-footer a {
-  color: white;
+.fat-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.fat-footer .col {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.fat-footer h3 {
+  color: var(--card-bg);
+  margin-bottom: 10px;
+}
+
+.fat-footer p,
+.fat-footer li {
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.5;
+}
+
+.fat-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fat-footer a {
+  color: var(--footer-text);
   text-decoration: none;
+}
+
+.fat-footer a:hover {
+  text-decoration: underline;
+}
+
+.newsletter {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter input[type="email"] {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  flex: 1;
+}
+
+.newsletter button {
+  padding: 8px 12px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.85);
+}
+
+@media (max-width: 700px) {
+  .fat-footer .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .newsletter {
+    flex-direction: column;
+  }
+  .newsletter button {
+    width: 100%;
+  }
 }
 /* --- ADD THIS TO THE BOTTOM OF STYLE.CSS --- */
 

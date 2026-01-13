@@ -7,7 +7,7 @@ const body = document.body;
 // 2. Check for saved user preference on page load
 if (localStorage.getItem("theme") === "dark") {
   body.classList.add("dark-mode");
-  if (toggleButton) toggleButton.textContent = "☀️ Light Mode";
+  if (toggleButton) toggleButton.textContent = "☀️";
 }
 
 // 3. Listen for a click (only if button exists)
