@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+.git/
+.gitignore
+.vscode/
+*.bak
+*.swp
