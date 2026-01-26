@@ -1,4 +1,4 @@
-# 🚀 Pranav's Full-Stack Portfolio
+# 🚀 Full-Stack Portfolio
 
 Welcome to my professional portfolio! This project showcases my skills as a Full-Stack Developer, specializing in the MERN stack, Python, and robust web engineering.
 
@@ -76,8 +76,4 @@ The application will be accessible at:
 
 ## 📄 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
-Built with ❤️ by [Pranav](https://github.com/toxicbishop)
+This project is licensed under the **MIT License** - see the [MIT License](LICENSE) file for details, Built by [Pranav](https://github.com/toxicbishop)
