@@ -26,6 +26,14 @@ Welcome to my professional portfolio! This project showcases my skills as a Full
 
 - [Docker and Docker Compose](https://docs.docker.com/get-docker/) installed.
 
+### 📄 Personalization
+
+To use the "Download Resume" feature, you must add your own resume file:
+
+1. Name your file `resume.pdf`.
+2. Place it in the root directory of this project.
+3. This file is ignored by Git to keep your personal information private.
+
 ### Fast Track (Windows)
 
 Simply double-click the `run.bat` file in the root directory. This will open an interactive menu to:

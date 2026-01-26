@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+
+# Docker
+.dockerignore
+
+# Database
+mongo-data/
+
+# Personal Files
+resume.pdf
+Profile.jpg
+
+# VS Code
+.vscode/
+
+# OS Files
+.DS_Store
+Thumbs.db
