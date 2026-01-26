@@ -1,35 +1,37 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from pymongo import MongoClient
 import os
 
 # 1. Initialize the Flask App
-app = Flask(__name__)
+app = Flask(__name__, static_folder='.')
 
 # 2. Enable CORS
-# This allows your HTML file (frontend) to talk to this Python script (backend)
 CORS(app)
 
 # 3. Connect to MongoDB
-# Use environment variable for MONGO_URI, defaulting to local MongoDB
 mongo_uri = os.environ.get("MONGO_URI", "mongodb://localhost:27017/")
-
 try:
     client = MongoClient(mongo_uri)
-    
-    # Create (or connect to) a database named 'portfolio_db'
     db = client['portfolio_db']
-    
-    # Create (or connect to) a collection (table) named 'messages'
     messages_collection = db['messages']
     print(f"✅ Connected to MongoDB at {mongo_uri}")
 except Exception as e:
     print(f"❌ Error connecting to MongoDB: {e}")
 
-# 4. Define the Root Route (Just to check if it works)
+# --- FRONTEND ROUTES ---
+
 @app.route('/')
 def home():
-    return "Your Local Backend is Running! 🚀"
+    # Serves your main index.html
+    return send_from_directory('.', 'index.html')
+
+@app.route('/<path:path>')
+def serve_static(path):
+    # Serves style.css, script.js, images, and other HTML pages
+    return send_from_directory('.', path)
+
+# --- BACKEND API ROUTES ---
 
 # 5. Define the Contact Form Route
 @app.route('/submit-contact', methods=['POST'])
