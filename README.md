@@ -30,13 +30,13 @@ This is the source code for my professional portfolio website, built using moder
 2. **Install dependencies**:
 
    ```bash
-   npm install
+   pnpm install
    ```
 
 3. **Run the development server**:
 
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 
 4. **Open the site**:
