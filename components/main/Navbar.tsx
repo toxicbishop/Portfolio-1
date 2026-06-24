@@ -9,7 +9,7 @@ const Navbar = () => {
         <a href="/" className="h-auto w-auto flex flex-row items-center">
           <div className="h-[40px] w-[40px] rounded-full overflow-hidden border border-[#7042f88b]">
             <Image
-              src="/pranav.jpg"
+              src="/pranav.png"
               alt="logo"
               width={40}
               height={40}
