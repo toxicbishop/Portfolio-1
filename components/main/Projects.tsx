@@ -43,9 +43,9 @@ const Projects = () => {
                 />
                 <ProjectCard
                     src="/projects/SMS-Pro.png"
-                    title="Student-GUI-With-SQL"
+                    title="Student-Marks-Management"
                     description="A database-driven management system featuring a graphical user interface for organizing and managing student information efficiently."
-                    link="https://github.com/toxicbishop/Student-GUI-With-SQL"
+                    link="https://github.com/toxicbishop/Student-Marks-Management"
                 />
                 <ProjectCard
                     src="/projects/Slotmachine.png"
