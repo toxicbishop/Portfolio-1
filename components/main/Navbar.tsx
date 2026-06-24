@@ -11,8 +11,8 @@ const Navbar = () => {
             <Image
               src="/assets/pranav.png"
               alt="logo"
-              width={40}
-              height={40}
+              width={150}
+              height={150}
               className="cursor-pointer hover:animate-spin object-cover h-full w-full"
             />
           </div>
