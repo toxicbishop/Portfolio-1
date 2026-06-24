@@ -65,6 +65,11 @@ const Projects = () => {
                     description="An application that connects to the PokeAPI to fetch, process, and display detailed information about various Pokemon."
                     link="https://github.com/toxicbishop/PokeAPI-Data-Fetcher"
                 />
+                <ProjectCard
+                    title="nanoGPT"
+                    description="A CPU-friendly character-level GPT from scratch in PyTorch featuring modern architecture (RoPE, RMSNorm, GQA) and a modular RAG pipeline with Chroma DB."
+                    link="https://github.com/toxicbishop/nanoGPT"
+                />
             </div>
         </div>
     );
