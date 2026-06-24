@@ -150,7 +150,7 @@ const Skills = () => {
                         loop
                         muted
                         autoPlay
-                        src="/cards-video.webm"
+                        src="/assets/cards-video.webm"
                     />
                 </div>
             </div>

@@ -41,7 +41,7 @@ const About = () => {
                             className="flex items-center justify-center w-[250px] h-[250px] rounded-full overflow-hidden border-[6px] border-[#7042f88b] bg-gradient-to-r from-purple-500 to-cyan-500"
                         >
                             <Image
-                                src="/pranav.png"
+                                src="/assets/pranav.png"
                                 alt="profile"
                                 width={250}
                                 height={250}
@@ -98,7 +98,7 @@ const About = () => {
                     playsInline
                     preload="false"
                     className="h-full"
-                    src="/encryption.webm/"
+                    src="/assets/encryption.webm/"
                 />
             </div>
         </section>

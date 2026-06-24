@@ -11,9 +11,9 @@ export const metadata: Metadata = {
     title: "Pranav Arun | Portfolio",
     description: "Welcome to Pranav Arun's professional portfolio showcase.",
     icons: {
-        icon: "/icon.png",
-        shortcut: "/icon.png",
-        apple: "/icon.png",
+        icon: "/favicon.png",
+        shortcut: "/favicon.png",
+        apple: "/favicon.png",
     },
 };
 
