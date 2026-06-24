@@ -15,3 +15,16 @@ tailwind.config.ts
 postcss.config.js
 next.config.js
 package-lock.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+.git/
+.vscode/
+*.bak
+*.swp
