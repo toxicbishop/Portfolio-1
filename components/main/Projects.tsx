@@ -27,7 +27,7 @@ const Projects = () => {
                     src="/projects/voting-system.png"
                     title="A Multi-Modal Blockchain Based Voting System"
                     description="A tamper-proof election platform integrating biometric facial recognition with decentralized Ethereum ledgers."
-                    link="#"
+                    link="https://github.com/Mohammed0572/VotingSystem"
                 />
                 <ProjectCard
                     src="/projects/costoflivingbenagluru.png"
