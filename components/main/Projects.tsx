@@ -65,16 +65,6 @@ const Projects = () => {
                     description="An application that connects to the PokeAPI to fetch, process, and display detailed information about various Pokemon."
                     link="https://github.com/toxicbishop/PokeAPI-Data-Fetcher"
                 />
-                <ProjectCard
-                    title="Carousel-Using-React"
-                    description="A responsive and interactive carousel component built with React, focusing on smooth transitions and modern UI design."
-                    link="https://github.com/toxicbishop/Carousel-React"
-                />
-                <ProjectCard
-                    title="Assci-Art-Using-Python"
-                    description="A creative utility that converts visual inputs into unique ASCII art representations using custom Python algorithms."
-                    link="https://github.com/toxicbishop/Assci-Art"
-                />
             </div>
         </div>
     );
