@@ -1,8 +1,15 @@
 # My - Full Stack Developer Portfolio
 
+[![Build Status](https://github.com/toxicbishop/Portfolio-1/actions/workflows/ci.yml/badge.svg)](https://github.com/toxicbishop/Portfolio-1/actions/workflows/ci.yml)
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+
 This is the source code for my professional portfolio website, built using modern web technologies focusing on performance, scalability, and exceptional user experience.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Frontend**: Next.js 14, React, TypeScript, Tailwind CSS
 - **Backend**: Express.js, Flask, Node.js
@@ -10,7 +17,7 @@ This is the source code for my professional portfolio website, built using moder
 - **Animations**: Framer Motion, Three.js
 - **Dev Tools**: Git, GitHub, Vercel, VS Code, Vite
 
-## 🛠️ Features
+## Features
 
 - **Space Themed UI**: Immersive 3D background effects using Three.js and StarBackground.
 - **Project Showcase**: Detailed view of my recent works and technical contributions.
@@ -19,12 +26,12 @@ This is the source code for my professional portfolio website, built using moder
 - **Responsive Design**: Fully optimized for mobile, tablet, and desktop devices.
 - **Contact**: Direct links to my professional social profiles and email.
 
-## 📦 Getting Started
+## Getting Started
 
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/toxicbishop/New-Portfolio.git
+   git clone https://github.com/toxicbishop/Portfolio-1.git
    ```
 
 2. **Install dependencies**:
@@ -45,8 +52,8 @@ This is the source code for my professional portfolio website, built using moder
 5. **Personalize Resume**:
    Upload your own resume in the `public/` directory (e.g., as `resume.pdf`) and update the relevant links in the components (such as `Navbar` or `HeroContent`) to point to your file.
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+[MIT License](LICENSE)
 
 &copy; 2026 Pranav Arun. All rights reserved.
