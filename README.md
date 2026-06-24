@@ -54,6 +54,6 @@ This is the source code for my professional portfolio website, built using moder
 
 ## License
 
-[MIT License](LICENSE)
+This project is licensed under the [MIT License](LICENSE).
 
 &copy; 2026 Pranav Arun. All rights reserved.
