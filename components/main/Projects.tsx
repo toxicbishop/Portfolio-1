@@ -24,7 +24,13 @@ const Projects = () => {
                     link="https://dsa-study-hub.vercel.app/"
                 />
                 <ProjectCard
-                    src="/projects/costoflivingbenagluru.jpeg"
+                    src="/projects/voting-system.png"
+                    title="A Multi-Modal Blockchain Based Voting System"
+                    description="A tamper-proof election platform integrating biometric facial recognition with decentralized Ethereum ledgers."
+                    link="#"
+                />
+                <ProjectCard
+                    src="/projects/costoflivingbenagluru.png"
                     title="Bengaluru-cost-explorer"
                     description="An interactive explorer for analyzing and visualizing the cost of living and real estate trends in Bengaluru."
                     link="https://github.com/Mohammed0572/bengaluru-cost-explorer"
