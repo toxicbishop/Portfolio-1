@@ -15,7 +15,7 @@ const Projects = () => {
                     src="/projects/homepage.png"
                     title="Portfolio Website"
                     description="A high-performance portfolio built with Next.js 14, Framer Motion, and Tailwind CSS, featuring 3D effects and smooth navigation."
-                    link="https://github.com/toxicbishop/Portfolio-2"
+                    link="https://github.com/toxicbishop/Portfolio-1"
                 />
                 <ProjectCard
                     src="/projects/DSA-Website-Photo.png"
