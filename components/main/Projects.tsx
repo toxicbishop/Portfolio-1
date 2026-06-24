@@ -24,6 +24,12 @@ const Projects = () => {
                     link="https://dsa-study-hub.vercel.app/"
                 />
                 <ProjectCard
+                    src="/projects/CRYPTVAULT.png"
+                    title="CryptVault"
+                    description="Secure AES-256 file encryption with blockchain-based audit logging for tamper-resistant compliance tracking and forensic verification."
+                    link="#"
+                />
+                <ProjectCard
                     src="/projects/voting-system.png"
                     title="A Multi-Modal Blockchain Based Voting System"
                     description="A tamper-proof election platform integrating biometric facial recognition with decentralized Ethereum ledgers."
