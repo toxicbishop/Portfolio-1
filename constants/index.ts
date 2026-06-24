@@ -155,6 +155,12 @@ export const Backend_skill = [
         width: 40,
         height: 40,
     },
+    {
+        skill_name: "Go",
+        Image: "/lang&frameworks/golang.svg",
+        width: 40,
+        height: 40,
+    },
 ];
 
 export const DevTools = [
@@ -185,6 +191,18 @@ export const DevTools = [
     {
         skill_name: "Vite",
         Image: "/lang&frameworks/Vite.js.svg",
+        width: 50,
+        height: 50,
+    },
+    {
+        skill_name: "Postman",
+        Image: "/lang&frameworks/postman.svg",
+        width: 50,
+        height: 50,
+    },
+    {
+        skill_name: "Docker",
+        Image: "/lang&frameworks/docker.svg",
         width: 50,
         height: 50,
     },
@@ -220,5 +238,11 @@ export const libraries = [
         Image: "/lang&frameworks/Three.js.svg",
         width: 60,
         height: 60,
+    },
+    {
+        skill_name: "Jupyter",
+        Image: "/lang&frameworks/jupyter.svg",
+        width: 50,
+        height: 50,
     },
 ];
