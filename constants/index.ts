@@ -52,17 +52,17 @@ export const Skill_data = [
 export const Socials = [
     {
         name: "Linkedin",
-        src: "/social media/linkedin.svg",
+        src: "/social-media/linkedin.svg",
         link: "https://www.linkedin.com/in/pranav-arun/",
     },
     {
         name: "Github",
-        src: "/social media/github.svg",
+        src: "/social-media/github.svg",
         link: "https://github.com/toxicbishop",
     },
     {
         name: "Discord",
-        src: "/social media/discord.svg",
+        src: "/social-media/discord.svg",
         link: "https://discord.com/users/701732138269016064",
     },
 ];
