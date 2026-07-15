@@ -39,7 +39,7 @@ const Projects = () => {
                     src="/projects/costoflivingbenagluru.png"
                     title="Bengaluru-cost-explorer"
                     description="An interactive explorer for analyzing and visualizing the cost of living and real estate trends in Bengaluru."
-                    link="https://github.com/Mohammed0572/bengaluru-cost-explorer"
+                    link="https://costinbengaluru.netlify.app"
                 />
                 <ProjectCard
                     src="/projects/SMS-Pro.png"
