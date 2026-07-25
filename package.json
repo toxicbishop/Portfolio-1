@@ -38,8 +38,5 @@
 
                  ],
     "author":  "",
-    "license":  "ISC",
-    "pnpm.overrides":  {
-                           "minimatch@9":  "\u003e=9.0.8"
-                       }
+    "license":  "ISC"
 }
