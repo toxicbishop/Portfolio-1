@@ -10,7 +10,10 @@ const MAX_REQUESTS = 100; // sensible default
 const rateLimitMap = new Map<string, { count: number; lastReset: number }>();
 
 export function middleware(request: NextRequest) {
-    const ip = request.ip ?? request.headers.get('x-forwarded-for') ?? 'unknown';
+    const ip =
+        request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ??
+        request.headers.get('x-real-ip') ??
+        'unknown';
 
     // For "user-based" rate limiting, we could check a session token or auth header
     // Here we use the IP or a potential user identifier
