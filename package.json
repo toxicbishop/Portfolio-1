@@ -6,10 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "next": "^14.0.3",
+    "next": "^15.5.21",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
@@ -24,7 +24,7 @@
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
-    "eslint-config-next": "14.0.3",
+    "eslint-config-next": "^15.5.21",
     "framer-motion": "^10.16.14",
     "postcss": "^8",
     "react-intersection-observer": "^9.5.3",
